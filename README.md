@@ -25,5 +25,4 @@ Password: `admin123`
 ## Workflow
 Shelter registers -> adds a pet -> admin approves pet listing -> adopter registers and applies -> admin approves/rejects application -> adopter checks status.
 
-## Notes
-This is a beginner demo. Passwords are stored as plain text for simplicity, so do not deploy publicly. It uses Java's built-in HTTP server, not actual Servlets/Tomcat.
+
