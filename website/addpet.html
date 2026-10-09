@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Add Pet</title>
+    <link rel="stylesheet" href="/website/style.css">
+</head>
+
+<body>
+    <nav><b>🐾 Pet Adoption</b><a href="/shelter">Dashboard</a></nav>
+    <div class="box">
+        <h1>Add a Pet 🐶</h1>
+        <p>Admin approval is needed before the pet appears to adopters.</p>
+        <form action="/addpet" method="post">
+            <label>Name</label><input name="name" required><label>Breed</label>
+            <input name="breed" required><label>Age</label>
+            <input type="number" name="age" min="0" required>
+            <label>Description</label>
+            <textarea name="description" required></textarea>
+            <button>Submit Pet</button>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+CREATE DATABASE IF NOT EXISTS petadoption;
+USE petadoption;
+
+CREATE TABLE IF NOT EXISTS users(
+ id INT PRIMARY KEY AUTO_INCREMENT,
+ name VARCHAR(100) NOT NULL,
+ email VARCHAR(150) NOT NULL UNIQUE,
+ password VARCHAR(100) NOT NULL,
+ role ENUM('ADMIN','SHELTER','ADOPTER') NOT NULL,
+ phone VARCHAR(30) NOT NULL DEFAULT '',
+ address VARCHAR(255) NOT NULL DEFAULT '',
+ status ENUM('ACTIVE','INACTIVE') NOT NULL DEFAULT 'ACTIVE',
+ created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS pets(
+ id INT PRIMARY KEY AUTO_INCREMENT,
+ name VARCHAR(100) NOT NULL,
+ breed VARCHAR(100) NOT NULL,
+ age INT NOT NULL,
+ description VARCHAR(500) NOT NULL,
+ shelter_id INT NOT NULL,
+ status ENUM('PENDING','APPROVED','REJECTED') NOT NULL DEFAULT 'PENDING',
+ created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+ FOREIGN KEY(shelter_id) REFERENCES users(id)
+);
+
+CREATE TABLE IF NOT EXISTS applications(
+ id INT PRIMARY KEY AUTO_INCREMENT,
+ pet_id INT NOT NULL,
+ adopter_id INT NOT NULL,
+ message VARCHAR(500) NOT NULL,
+ status ENUM('PENDING','APPROVED','REJECTED') NOT NULL DEFAULT 'PENDING',
+ created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+ FOREIGN KEY(pet_id) REFERENCES pets(id),
+ FOREIGN KEY(adopter_id) REFERENCES users(id)
+);
+
+INSERT INTO users(name,email,password,role,phone,address,status)
+VALUES('Admin','admin@gmail.com','admin123','ADMIN','','Admin account','ACTIVE')
+ON DUPLICATE KEY UPDATE email=email;
+
+-- If you already created the old users table, run these two commands once:
+-- ALTER TABLE users ADD COLUMN phone VARCHAR(30) NOT NULL DEFAULT '';
+-- ALTER TABLE users ADD COLUMN address VARCHAR(255) NOT NULL DEFAULT '';

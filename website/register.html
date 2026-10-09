@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Register</title>
+    <link rel="stylesheet" href="/website/style.css">
+</head>
+
+<body>
+    <nav><b>🐾 Pet Adoption</b><a href="/">Home</a></nav>
+    <div class="box">
+        <h1>Create Account</h1>
+        <form action="/register" method="post"><label>Name</label><input name="name" required><label>Email</label><input
+                type="email" name="email" required><label>Password</label><input type="password" name="password"
+                required><label>Phone Number</label><input type="tel" name="phone"
+                required><label>Address</label><textarea name="address" required></textarea><label>Role</label><select
+                name="role">
+                <option value="ADOPTER">Adopter</option>
+                <option value="SHELTER">Shelter</option>
+            </select><button>Register</button></form>
+        <p>Already registered? <a href="/login">Login</a></p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,184 @@
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #26332a;
+    background: #f4f8f5
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    padding: 18px 7%;
+    background: white;
+    box-shadow: 0 2px 8px #0001
+}
+
+nav b {
+    color: #2e7d32;
+    font-size: 20px
+}
+
+nav a {
+    color: #2e7d32;
+    text-decoration: none;
+    margin: 5px 8px
+}
+
+.hero {
+    text-align: center;
+    padding: 65px 20px;
+    background: linear-gradient(135deg, #e8f5e9, #fff8e1)
+}
+
+h1,
+h2 {
+    color: #2e7d32
+}
+
+.hero h1 {
+    font-size: 36px
+}
+
+.btn,
+button {
+    display: inline-block;
+    background: #4caf50;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    padding: 11px 16px;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 3px
+}
+
+.secondary {
+    background: white;
+    color: #2e7d32;
+    border: 1px solid #4caf50
+}
+
+main {
+    padding: 30px 7%;
+    min-height: 55vh
+}
+
+.center {
+    text-align: center
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin: 20px 0
+}
+
+.card {
+    flex: 1 1 220px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #0001;
+    border-top: 4px solid #81c784
+}
+
+.box {
+    background: white;
+    padding: 28px;
+    max-width: 450px;
+    margin: 45px auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px #0001
+}
+
+.box h1 {
+    text-align: center
+}
+
+label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold
+}
+
+input,
+select,
+textarea {
+    display: block;
+    width: 100%;
+    padding: 11px;
+    margin: 7px 0 12px;
+    border: 1px solid #cbd5cc;
+    border-radius: 5px;
+    font: inherit
+}
+
+form button {
+    width: 100%
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    margin: 18px 0
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #e1e8e2;
+    vertical-align: top
+}
+
+th {
+    background: #e8f5e9;
+    color: #2e7d32
+}
+
+.inline {
+    display: inline
+}
+
+.inline button {
+    width: auto;
+    padding: 7px 9px;
+    font-size: 13px
+}
+
+footer {
+    text-align: center;
+    background: #2e7d32;
+    color: white;
+    padding: 18px;
+    margin-top: 25px
+}
+
+@media(max-width:650px) {
+    nav {
+        align-items: flex-start;
+        flex-direction: column
+    }
+
+    .hero h1 {
+        font-size: 28px
+    }
+
+    table {
+        font-size: 13px
+    }
+
+    th,
+    td {
+        padding: 7px
+    }
+}
