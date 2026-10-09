@@ -16,7 +16,7 @@ Simple Java + HTML/CSS + MySQL project. Uses Java built-in `HttpServer`; Tomcat 
 3. Put `mysql-connector-j-26.7.0.jar` inside `lib/`.
 4. In `src/DBConnection.java`, replace `YOUR_MYSQL_PASSWORD` with your MySQL password.
 5. Open this folder in VS Code and run `run.bat`.
-6. Open http://localhost:8080.
+6. Open http://localhost:8080..
 
 ## Admin login
 Email: `admin@gmail.com`
